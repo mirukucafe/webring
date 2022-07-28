@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crackring</title>
+        <style>
+            body {
+                background-color: #181a1b;
+                color: #e8e6e3;
+                font-family: sans-serif;
+            }
+
+            a {
+                color: rgb(51, 145, 255);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Crackring</h1>
+        <h3>Who tf uses webrings in <%= year %>?</h3>
+        <h5>iframe our disgusting premade embed:</h5>
+        <code>
+            <%= `<iframe src="${baseUrl}/embed" frameBorder="0" width="200" height="30"></iframe>` %>
+        </code>
+        <h5>Or build your own:</h5>
+        <code>
+            <%= baseUrl %>/next?host=yoursite.tld <br />
+            <%= baseUrl %>/prev?host=yoursite.tld
+        </code>
+        <h3>Site list</h3>
+        <ul>
+            <% for (const site of sites) { %>
+                <li><a href="<%= site %>?utm_medium=ring_index"><%= site %></a></li>
+            <% } %>
+        </ul>
+    </body>
+</html>

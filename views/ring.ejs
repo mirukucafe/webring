@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <style>
+            body {
+                height: 30px;
+                width: 200px;
+                margin: 0;
+                user-select: none;
+                font-family: sans-serif;
+                font-size: 20px;
+                background-color: transparent;
+            }
+
+            .container {
+                background-color: darkslategrey;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                border-radius: 5px;
+            }
+
+            .button {
+                height: 30px;
+                width: 30px;
+                background-color: #966da8;
+                border-radius: 5px;
+            }
+
+            .button svg {
+                color: #ddd;
+                width: 100%;
+                height: 100%;
+            }
+
+            .button svg:hover {
+                color: #fff;
+                transform: scale(1.05);
+            }
+
+            .title {
+                text-decoration: none;
+                color: #e9d9f0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <a href="<%= prev %>" target="_parent">
+                <div class="button">
+                    <svg viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+                    </svg>
+                </div>
+            </a>
+            <a href="/" target="_parent" class="title"><span>CRACKRING !!</span></a>
+            <a href="<%= next %>" target="_parent">
+                <div class="button">
+                    <svg viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </body>
+</html>
