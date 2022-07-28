@@ -99,7 +99,7 @@ app.get('/', async (req: Request, res: Response) => {
                     sites: siteList.map(
                         host => `${siteConfig[host].https !== false ? 'https' : 'http'}://${host}`
                     ),
-                    baseUrl: `${req.protocol}://${req.get('host')}`,
+                    baseUrl: `https://${req.get('host')}`,
                     year: new Date().getFullYear()
                 }
             )
