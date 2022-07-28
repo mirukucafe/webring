@@ -12,7 +12,7 @@
             }
 
             .container {
-                background-color: darkslategrey;
+                background-color: <%= colors.bg %>;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -22,24 +22,23 @@
             .button {
                 height: 30px;
                 width: 30px;
-                background-color: #966da8;
+                background-color: <%= colors.button %>;
                 border-radius: 5px;
             }
 
             .button svg {
-                color: #ddd;
+                color: <%= colors.fg %>;
                 width: 100%;
                 height: 100%;
             }
 
             .button svg:hover {
-                color: #fff;
                 transform: scale(1.05);
             }
 
             .title {
                 text-decoration: none;
-                color: #e9d9f0;
+                color: <%= colors.fg %>;
             }
         </style>
     </head>

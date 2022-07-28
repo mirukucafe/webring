@@ -47,6 +47,11 @@ app.get('/embed', async (req: Request, res: Response) => {
                 {
                     prev: `${siteConfig[prev].https !== false ? 'https' : 'http'}://${prev}?utm_medium=ring`,
                     next: `${siteConfig[next].https !== false ? 'https' : 'http'}://${next}?utm_medium=ring`,
+                    colors: {
+                        fg: req.query['fg'] || '#d3a6d1',
+                        bg: req.query['bg'] || '#414b67',
+                        button: req.query['button'] || '#576c75',
+                    },
                 },
             )
         );
